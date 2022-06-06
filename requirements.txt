@@ -1,0 +1,10 @@
+###### Requirements without Version Specifiers ######
+pandas
+networkx
+numpy
+datetime
+requests
+xmltodict
+python-magic
+filetype
+
