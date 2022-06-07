@@ -4,6 +4,7 @@ import json
 import os
 import numpy as np
 from operator import itemgetter
+from itertools import combinations
 
 class LeaderDensity():
     def __init__(self,verbose):
@@ -239,10 +240,24 @@ class LeaderDensity():
     def return_inv_density(self):
         return self.inv_density_value
 
-
     # Return a list of nodes sorted based on degree
     # Input: input_Graph - the graph to analyze and sort nodes based on degree
     # Output: a sorted dictionary of nodes and their corresponding degree, sorted largest to smallest
     def return_sorted_node_degree(self):
         sorted_degree = sorted(dict(self.Graph.degree(self.Graph.nodes())).items(), key=itemgetter(1), reverse=True)
         return sorted_degree
+
+    # Function to create all possible combinations of input nodes
+    # Input: input_nodes - list of input notes in format [node1,node2,node3...]
+    # Output: None
+    def combination_edges(self, input_nodes):
+        combo_edges = list(combinations(input_nodes, 2))
+        for e in combo_edges:
+            self.save_edge(self.create_edge(e[0], e[1]))
+
+    # Function for creating ludacris mode graph which sets the correct nodes and edges before processing
+    # Input: None
+    # Output: None
+    def ludacris_process(self):
+        self.nodes = self.GraphDB.columns
+        self.combination_edges(self.nodes)

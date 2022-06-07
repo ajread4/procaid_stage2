@@ -16,3 +16,11 @@ git clone https://github.com/ajread4/procaid_stage2.git
 cd procaid_stage2
 pip3 install -r requirements.txt
 ```
+
+## Usage 
+```
+
+```
+
+## Example Usage 
+1. Find the leadership and density value of a graph with 
