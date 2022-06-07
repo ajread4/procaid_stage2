@@ -6,11 +6,11 @@ def main():
 	Main function for analyze
 	"""
 	parser = argparse.ArgumentParser(description='analyze - a capability to perform leadership and density graph analytics on information security data.')
-	parser.add_argument("data",action='store',help='specify the input data for graph creation, can be file or folder')
+	parser.add_argument("data",action='store',help='specify the input data for graph creation, can be json file or folder of json files')
 	parser.add_argument('-e',"--edges", action='store', help='specify the edges for the graph to create in the form of NodeX--NodeY,NodeY--NodeZ,...',metavar='edges')
 	parser.add_argument("-v","--verbose", help="run analyze in verbose mode",action="store_true")
 	parser.add_argument("-i","--inverse",help="return inverse leadership and inverse density values",action="store_false")
-	parser.add_argument('--ludacris',action='store_true',help='enable ludacris mode which creates a graph using all possible nodes and edges',default=False)
+	parser.add_argument('--ludacris',action='store_true',help='create a graph using all possible nodes and edges in the dataset',default=False)
 	#parser.add_argument("-o","--output",type=str,action="store",help="specify file location to output results",metavar="file") # to be added
 	'''
 	# To be added 
