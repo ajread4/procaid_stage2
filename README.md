@@ -25,7 +25,7 @@ usage: analyze.py [-h] [-e edges] [-v] [-i] [--ludacris] data
 analyze - a capability to perform leadership and density graph analytics on information security data.
 
 positional arguments:
-  data                  specify the input data for graph creation, can be json file or folder of json files
+  data                  specify the input data for graph creation, can be json file or folder of json files that MUST be new line delimited JSON
 
 optional arguments:
   -h, --help            show this help message and exit
